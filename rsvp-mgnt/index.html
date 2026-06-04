@@ -437,16 +437,21 @@ const TABLES_DEF=[
   {id:"T5",num:"Table 5",cap:6,section:"booth_left"},
   {id:"T7",num:"Table 7",cap:6,section:"booth_left"},
   {id:"T8",num:"Table 8",cap:4,section:"booth_left"},
-  {id:"T9",num:"Table 9 (Top)",cap:4,section:"center_tables"},
-  {id:"T10",num:"Table 10 (Top)",cap:4,section:"center_tables"},
-  {id:"T11",num:"Table 11 (Bot)",cap:4,section:"center_tables"},
-  {id:"T12",num:"Table 12 (Bot)",cap:4,section:"center_tables"},
-  {id:"T13",num:"Table 13 (Bot)",cap:4,section:"center_tables"},
-  {id:"T14",num:"Table 14 (Bot)",cap:4,section:"center_tables"},
-  {id:"T15",num:"Table 15 (Bot)",cap:4,section:"center_tables"},
-  {id:"T16",num:"Table 16 (Bot)",cap:4,section:"center_tables"},
+  {id:"T9",num:"Table 9",cap:4,section:"center_banq"},
+  {id:"T10",num:"Table 10",cap:4,section:"center_banq"},
+  {id:"T11",num:"Table 11",cap:4,section:"center_banq"},
+  {id:"T12",num:"Table 12",cap:4,section:"center_banq"},
+  {id:"T13",num:"Table 13",cap:4,section:"center_banq"},
+  {id:"T14",num:"Table 14",cap:4,section:"center_banq"},
+  {id:"T15",num:"Table 15",cap:4,section:"center_banq"},
+  {id:"T16",num:"Table 16",cap:4,section:"center_banq"},
   {id:"T17",num:"Table 17",cap:6,section:"bottom_booth"},
-  {id:"BAR",num:"Bar",cap:8,section:"bar"},
+  {id:"BAR",num:"Bar",cap:10,section:"bar"},
+  {id:"P1",num:"Patio 1",cap:4,section:"patio"},
+  {id:"P2",num:"Patio 2",cap:4,section:"patio"},
+  {id:"P3",num:"Patio 3",cap:4,section:"patio"},
+  {id:"P4",num:"Patio 4",cap:4,section:"patio"},
+  {id:"P5",num:"Patio 5",cap:4,section:"patio"},
 ];
 
 const SAMPLE_RSV=[
@@ -465,6 +470,7 @@ function saveStore(d){try{localStorage.setItem(STORE_KEY,JSON.stringify(d));}cat
 let _store=loadStore();
 if(!_store){_store={reservations:JSON.parse(JSON.stringify(SAMPLE_RSV)),tableStates:{},tables:TABLES_DEF,servers:[{id:"s1",name:"Amara Johnson",role:"Lead Server",color:"#C8956C",initials:"AJ"},{id:"s2",name:"Tyler Brooks",role:"Server",color:"#5B96C8",initials:"TB"},{id:"s3",name:"Nia Carter",role:"Server",color:"#9B7EC8",initials:"NC"},{id:"s4",name:"Jordan Ellis",role:"Server / Bar",color:"#3AACA8",initials:"JE"}]};saveStore(_store);}
 if(!_store.tables)_store.tables=TABLES_DEF;
+TABLES_DEF.forEach(td=>{if(!_store.tables.find(t=>t.id===td.id))_store.tables.push(td);});
 let reservations=_store.reservations;
 
 function persistRsv(){_store.reservations=reservations;saveStore(_store);document.getElementById('sync-lbl').textContent='Saved '+(new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}));}
