@@ -263,6 +263,8 @@ function saveStore(d){try{localStorage.setItem(STORE_KEY,JSON.stringify(d));}cat
 
 let DATA = loadStore() || JSON.parse(JSON.stringify(SAMPLE_DATA));
 if(!DATA.tables)    DATA.tables    = TABLES_DEF;
+// Merge any new tables added to TABLES_DEF that aren't in the stored data yet
+TABLES_DEF.forEach(td => { if(!DATA.tables.find(t=>t.id===td.id)) DATA.tables.push(td); });
 if(!DATA.servers)   DATA.servers   = SAMPLE_DATA.servers;
 if(!DATA.tableStates) DATA.tableStates = {};
 
@@ -695,7 +697,7 @@ function updateStats() {
 let _changingSeatId = null, _seatPreTable = null;
 
 function tableClick(tid) {
-  const t = DATA.tables.find(x => x.id === tid);
+  const t = DATA.tables.find(x => x.id === tid) || TABLES_DEF.find(x => x.id === tid);
   if(!t) return;
   const {state, r} = getTableState(tid);
   const ss = stateStyle(state);
