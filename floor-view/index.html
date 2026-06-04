@@ -124,7 +124,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);heigh
 </div>
 
 <div class="floor-container">
-  <svg id="floor-svg" viewBox="0 0 980 700" xmlns="http://www.w3.org/2000/svg" style="width:980px;max-width:100%;height:auto"></svg>
+  <svg id="floor-svg" viewBox="0 0 980 760" xmlns="http://www.w3.org/2000/svg" style="width:980px;max-width:100%;height:auto"></svg>
 </div>
 
 <!-- TABLE ACTION MODAL -->
@@ -344,7 +344,7 @@ function renderFloor() {
   <rect width="980" height="700" fill="url(#grid)"/>
 
   <!-- Main room outline -->
-  <rect x="16" y="16" width="948" height="668" rx="4" fill="${wallFill}" stroke="${wallStroke}" stroke-width="3"/>
+  <rect x="16" y="16" width="948" height="728" rx="4" fill="${wallFill}" stroke="${wallStroke}" stroke-width="3"/>
 
   <!-- DT area — dashed boundary top-right -->
   <line x1="820" y1="16" x2="820" y2="200" stroke="${accentCol}" stroke-width="1.5" stroke-dasharray="6,3" opacity=".5"/>
@@ -354,34 +354,34 @@ function renderFloor() {
   <line x1="820" y1="16" x2="964" y2="100" stroke="${wallStroke}" stroke-width="1.5" stroke-dasharray="4,3"/>
 
   <!-- Left booth section background -->
-  <rect x="22" y="80" width="210" height="530" rx="3" fill="${boothFill}" stroke="${boothWall}" stroke-width=".8"/>
+  <rect x="22" y="80" width="210" height="600" rx="3" fill="${boothFill}" stroke="${boothWall}" stroke-width=".8"/>
   <text x="127" y="98" font-family="Playfair Display,serif" font-size="10" fill="${accentCol}" text-anchor="middle" letter-spacing="2" opacity=".8">BOOTHS</text>
 
   <!-- Right booth strip background -->
-  <rect x="748" y="100" width="215" height="530" rx="3" fill="${boothFill}" stroke="${boothWall}" stroke-width=".8"/>
+  <rect x="748" y="100" width="215" height="600" rx="3" fill="${boothFill}" stroke="${boothWall}" stroke-width=".8"/>
   <text x="855" y="118" font-family="Playfair Display,serif" font-size="10" fill="${accentCol}" text-anchor="middle" letter-spacing="2" opacity=".8">BOOTHS</text>
 
   <!-- Entrance bottom -->
-  <rect x="380" y="677" width="220" height="6" rx="2" fill="${accentCol}" opacity=".5"/>
-  <text x="490" y="697" font-family="Inter,sans-serif" font-size="9" font-weight="500" fill="${accentCol}" text-anchor="middle" letter-spacing=".5">↑ MAIN ENTRANCE</text>
+  <rect x="380" y="737" width="220" height="6" rx="2" fill="${accentCol}" opacity=".5"/>
+  <text x="490" y="757" font-family="Inter,sans-serif" font-size="9" font-weight="500" fill="${accentCol}" text-anchor="middle" letter-spacing=".5">↑ MAIN ENTRANCE</text>
 
-  <!-- Exit doors bottom-right (two × symbols from blueprint) -->
-  <rect x="800" y="620" width="42" height="42" rx="3" fill="${roomFill}" stroke="${wallStroke}" stroke-width="1.2"/>
-  <line x1="807" y1="627" x2="835" y2="655" stroke="${light?'rgba(100,60,40,.4)':'rgba(200,149,108,.4)'}" stroke-width="1.5"/>
-  <line x1="835" y1="627" x2="807" y2="655" stroke="${light?'rgba(100,60,40,.4)':'rgba(200,149,108,.4)'}" stroke-width="1.5"/>
-  <text x="821" y="677" font-family="Inter,sans-serif" font-size="8" fill="${labelCol}" text-anchor="middle">EXIT</text>
+  <!-- Exit doors bottom-right -->
+  <rect x="800" y="680" width="42" height="42" rx="3" fill="${roomFill}" stroke="${wallStroke}" stroke-width="1.2"/>
+  <line x1="807" y1="687" x2="835" y2="715" stroke="${light?'rgba(100,60,40,.4)':'rgba(200,149,108,.4)'}" stroke-width="1.5"/>
+  <line x1="835" y1="687" x2="807" y2="715" stroke="${light?'rgba(100,60,40,.4)':'rgba(200,149,108,.4)'}" stroke-width="1.5"/>
+  <text x="821" y="737" font-family="Inter,sans-serif" font-size="8" fill="${labelCol}" text-anchor="middle">EXIT</text>
 
-  <rect x="858" y="620" width="42" height="42" rx="3" fill="${roomFill}" stroke="${wallStroke}" stroke-width="1.2"/>
-  <line x1="865" y1="627" x2="893" y2="655" stroke="${light?'rgba(100,60,40,.4)':'rgba(200,149,108,.4)'}" stroke-width="1.5"/>
-  <line x1="893" y1="627" x2="865" y2="655" stroke="${light?'rgba(100,60,40,.4)':'rgba(200,149,108,.4)'}" stroke-width="1.5"/>
-  <text x="879" y="677" font-family="Inter,sans-serif" font-size="8" fill="${labelCol}" text-anchor="middle">EXIT</text>
+  <rect x="858" y="680" width="42" height="42" rx="3" fill="${roomFill}" stroke="${wallStroke}" stroke-width="1.2"/>
+  <line x1="865" y1="687" x2="893" y2="715" stroke="${light?'rgba(100,60,40,.4)':'rgba(200,149,108,.4)'}" stroke-width="1.5"/>
+  <line x1="893" y1="687" x2="865" y2="715" stroke="${light?'rgba(100,60,40,.4)':'rgba(200,149,108,.4)'}" stroke-width="1.5"/>
+  <text x="879" y="737" font-family="Inter,sans-serif" font-size="8" fill="${labelCol}" text-anchor="middle">EXIT</text>
 
   <!-- Host stand -->
-  <rect x="450" y="634" width="80" height="34" rx="3" fill="${roomFill}" stroke="${wallStroke}" stroke-width="1"/>
-  <text x="490" y="655" font-family="Inter,sans-serif" font-size="8" fill="${labelCol}" text-anchor="middle">HOST</text>
+  <rect x="450" y="694" width="80" height="34" rx="3" fill="${roomFill}" stroke="${wallStroke}" stroke-width="1"/>
+  <text x="490" y="715" font-family="Inter,sans-serif" font-size="8" fill="${labelCol}" text-anchor="middle">HOST</text>
 
   <!-- Decorative plants -->
-  ${[[220,36],[380,36],[600,36],[750,36],[230,650],[730,650]].map(([px,py])=>`
+  ${[[220,36],[380,36],[600,36],[750,36],[230,710],[730,710]].map(([px,py])=>`
     <circle cx="${px}" cy="${py}" r="9" fill="${light?'rgba(76,175,130,.15)':'rgba(76,175,130,.18)'}" stroke="${light?'rgba(76,175,130,.3)':'rgba(76,175,130,.35)'}" stroke-width=".7"/>
     <text x="${px}" y="${py+4}" font-size="9" text-anchor="middle">🌿</text>
   `).join('')}
@@ -475,136 +475,113 @@ function renderFloor() {
   });
 
   // ══════════════════════════════════════════════
-  // CENTER BANQUETTE TOP — long bench table
-  // Tables 9 (top-left), 10 (top-right) above the bench
-  //         12 (bot-left), 11 (bot-right) below the bench
-  // Matches blueprint: bench runs ~x310-660, y245-355
-  // Numbers: 9 top-left, 10 top-right, 12 bottom-left, 11 bottom-right
+  // CENTER BANQUETTE TOP — 4 clean cells in a 2×2 grid
+  // T9 (top-left), T10 (top-right)
+  // T11 (bot-left), T12 (bot-right)
+  // Gap between cols = 8px, gap between rows = 8px
   // ══════════════════════════════════════════════
   {
-    const BX=280, BY=235, BW=400, BH=120;
-    // Bench surface
-    h += `
-    <rect x="${BX}" y="${BY+18}" width="${BW}" height="${BH-36}" rx="4"
+    const BX=280, BY=230;
+    const GAP=8, CW=192, CH=96; // cell width / height
+    const TOTAL_W = CW*2+GAP; // 392
+    const TOTAL_H = CH*2+GAP; // 200
+
+    // Bench backing strip behind the cells
+    h += `<rect x="${BX-4}" y="${BY-4}" width="${TOTAL_W+8}" height="${TOTAL_H+8}" rx="6"
       fill="${boothFill}" stroke="${boothWall}" stroke-width="1.5"/>`;
 
-    // T-shaped support in middle (from blueprint — center spine)
-    h += `<rect x="${BX+BW/2-10}" y="${BY+22}" width="20" height="${BH-44}" rx="2"
-      fill="${light?'rgba(150,100,60,.2)':'rgba(200,149,108,.15)'}" stroke="${boothWall}" stroke-width=".7"/>`;
-
-    // 4 table sections
-    const sections = [
-      { id:'T9',  x:BX,          y:BY,      w:BW/2-6, h:18+6, seat:'top',    label:'9'  },
-      { id:'T10', x:BX+BW/2+6,   y:BY,      w:BW/2-6, h:18+6, seat:'top',    label:'10' },
-      { id:'T12', x:BX,          y:BY+BH-24,w:BW/2-6, h:24,   seat:'bottom', label:'12' },
-      { id:'T11', x:BX+BW/2+6,   y:BY+BH-24,w:BW/2-6, h:24,   seat:'bottom', label:'11' },
+    const cells = [
+      { id:'T9',  col:0, row:0 },
+      { id:'T10', col:1, row:0 },
+      { id:'T11', col:0, row:1 },
+      { id:'T12', col:1, row:1 },
     ];
 
-    // Full clickable overlays per table
-    sections.forEach(sec => {
-      const {state, r} = getTableState(sec.id);
+    cells.forEach(cell => {
+      const {state, r} = getTableState(cell.id);
       const s = stateStyle(state);
-      const fullH = BH;
-      const fw = sec.w;
-      const fx = sec.x;
-      const fy = BY;
-      zone(sec.id, fx, fy, fw, fullH);
+      const cx = BX + cell.col*(CW+GAP);
+      const cy = BY + cell.row*(CH+GAP);
+      const cx_mid = cx + CW/2;
+      const cy_mid = cy + CH/2;
+      zone(cell.id, cx, cy, CW, CH);
 
-      // Colored overlay on half of bench
-      h += `<rect x="${fx}" y="${fy}" width="${fw}" height="${fullH}" rx="3"
-        fill="${s.fill}" stroke="${s.stroke}" stroke-width="1.4" opacity=".85"/>`;
-
-      // Table number
-      h += `<text x="${fx+fw/2}" y="${BY+BH/2-6}" font-family="Inter,sans-serif" font-size="13" font-weight="500"
-        fill="${s.text}" text-anchor="middle">T${sec.label}</text>`;
-      h += `<text x="${fx+fw/2}" y="${BY+BH/2+10}" font-family="Inter,sans-serif" font-size="9"
+      h += `<rect x="${cx}" y="${cy}" width="${CW}" height="${CH}" rx="5"
+        fill="${s.fill}" stroke="${s.stroke}" stroke-width="2"/>`;
+      h += `<text x="${cx_mid}" y="${cy_mid-14}" font-family="Inter,sans-serif" font-size="13" font-weight="500"
+        fill="${s.text}" text-anchor="middle">${cell.id}</text>`;
+      h += `<text x="${cx_mid}" y="${cy_mid+4}" font-family="Inter,sans-serif" font-size="10"
         fill="${s.text}" text-anchor="middle" opacity=".85">${s.label}</text>`;
-      if(r) h += `<text x="${fx+fw/2}" y="${BY+BH/2+24}" font-family="Inter,sans-serif" font-size="8.5"
-        fill="${s.text}" text-anchor="middle" opacity=".75">${r.first} ${r.last.charAt(0)}.</text>`;
-
-      h += `<rect x="${fx}" y="${fy}" width="${fw}" height="${fullH}" fill="transparent" stroke="transparent" stroke-width="4" style="cursor:pointer" onclick="tableClick('${sec.id}')"/>`;
+      if(r) h += `<text x="${cx_mid}" y="${cy_mid+20}" font-family="Inter,sans-serif" font-size="9"
+        fill="${s.text}" text-anchor="middle" opacity=".8">${r.first} ${r.last.charAt(0)}.</text>`;
+      h += `<rect x="${cx}" y="${cy}" width="${CW}" height="${CH}" fill="transparent" stroke="transparent" style="cursor:pointer" onclick="tableClick('${cell.id}')"/>`;
     });
 
     // Seat marks — top row
     for(let i=0;i<8;i++){
-      const sx = BX+24+i*48;
-      h += `<rect x="${sx-16}" y="${BY-18}" width="32" height="14" rx="3"
+      const sx = BX + 22 + i*48;
+      h += `<rect x="${sx-14}" y="${BY-20}" width="28" height="13" rx="3"
         fill="${seatColor}" stroke="${boothWall}" stroke-width=".7"/>`;
     }
     // Seat marks — bottom row
     for(let i=0;i<8;i++){
-      const sx = BX+24+i*48;
-      h += `<rect x="${sx-16}" y="${BY+BH+4}" width="32" height="14" rx="3"
+      const sx = BX + 22 + i*48;
+      h += `<rect x="${sx-14}" y="${BY+TOTAL_H+8}" width="28" height="13" rx="3"
         fill="${seatColor}" stroke="${boothWall}" stroke-width=".7"/>`;
     }
   }
 
   // ══════════════════════════════════════════════
-  // CENTER BANQUETTE BOTTOM — tables 13,14,15,16
-  // Matches blueprint structure (mirror of top)
-  // Numbers: 13 top-left, 14 top-right, 16 bot-left, 15 bot-right
+  // CENTER BANQUETTE BOTTOM — 4 clean cells in a 2×2 grid
+  // T13 (top-left), T14 (top-right)
+  // T15 (bot-left), T16 (bot-right)
   // ══════════════════════════════════════════════
   {
-    const BX=280, BY=415, BW=400, BH=120;
-    h += `
-    <rect x="${BX}" y="${BY+18}" width="${BW}" height="${BH-36}" rx="4"
+    const BX=280, BY=460;
+    const GAP=8, CW=192, CH=96;
+    const TOTAL_W = CW*2+GAP;
+    const TOTAL_H = CH*2+GAP;
+
+    h += `<rect x="${BX-4}" y="${BY-4}" width="${TOTAL_W+8}" height="${TOTAL_H+8}" rx="6"
       fill="${boothFill}" stroke="${boothWall}" stroke-width="1.5"/>`;
-    h += `<rect x="${BX+BW/2-10}" y="${BY+22}" width="20" height="${BH-44}" rx="2"
-      fill="${light?'rgba(150,100,60,.2)':'rgba(200,149,108,.15)'}" stroke="${boothWall}" stroke-width=".7"/>`;
 
-    const sections = [
-      { id:'T13', x:BX,        y:BY, w:BW/2-6, label:'13' },
-      { id:'T14', x:BX+BW/2+6, y:BY, w:BW/2-6, label:'14' },
-      { id:'T16', x:BX,        y:BY, w:BW/2-6, label:'16' },
-      { id:'T15', x:BX+BW/2+6, y:BY, w:BW/2-6, label:'15' },
-    ];
-    // Only render T13 and T14 left/right halves for top numbers
-    // T16 and T15 share same left/right but bottom numbers
-    // Per blueprint: 13 & 14 on top, 16 & 15 on bottom
-    // Render as 4 clickable quarter-zones
-    const quarters = [
-      { id:'T13', x:BX,        y:BY,      w:BW/2-6, h:BH/2-4 },
-      { id:'T14', x:BX+BW/2+6, y:BY,      w:BW/2-6, h:BH/2-4 },
-      { id:'T16', x:BX,        y:BY+BH/2, w:BW/2-6, h:BH/2   },
-      { id:'T15', x:BX+BW/2+6, y:BY+BH/2, w:BW/2-6, h:BH/2   },
+    const cells = [
+      { id:'T13', col:0, row:0 },
+      { id:'T14', col:1, row:0 },
+      { id:'T15', col:0, row:1 },
+      { id:'T16', col:1, row:1 },
     ];
 
-    // Render as full halves with overlapping numbers
-    [
-      { id:'T13', x:BX,        lbl:'13', numY:BY+BH/2-8  },
-      { id:'T14', x:BX+BW/2+6, lbl:'14', numY:BY+BH/2-8  },
-      { id:'T16', x:BX,        lbl:'16', numY:BY+BH/2+22 },
-      { id:'T15', x:BX+BW/2+6, lbl:'15', numY:BY+BH/2+22 },
-    ].forEach((sec, i) => {
-      const {state, r} = getTableState(sec.id);
+    cells.forEach(cell => {
+      const {state, r} = getTableState(cell.id);
       const s = stateStyle(state);
-      const hw = BW/2-6;
-      const hh = BH/2;
-      const hy = i < 2 ? BY : BY+hh;
-      zone(sec.id, sec.x, hy, hw, hh);
+      const cx = BX + cell.col*(CW+GAP);
+      const cy = BY + cell.row*(CH+GAP);
+      const cx_mid = cx + CW/2;
+      const cy_mid = cy + CH/2;
+      zone(cell.id, cx, cy, CW, CH);
 
-      h += `<rect x="${sec.x}" y="${hy}" width="${hw}" height="${hh}" rx="3"
-        fill="${s.fill}" stroke="${s.stroke}" stroke-width="1.4" opacity=".85"/>`;
-      h += `<text x="${sec.x+hw/2}" y="${hy+hh/2+5}" font-family="Inter,sans-serif" font-size="12" font-weight="500"
-        fill="${s.text}" text-anchor="middle">T${sec.lbl}</text>`;
-      h += `<text x="${sec.x+hw/2}" y="${hy+hh/2+19}" font-family="Inter,sans-serif" font-size="8.5"
-        fill="${s.text}" text-anchor="middle" opacity=".8">${s.label}</text>`;
-      if(r) h += `<text x="${sec.x+hw/2}" y="${hy+hh/2+32}" font-family="Inter,sans-serif" font-size="8"
-        fill="${s.text}" text-anchor="middle" opacity=".7">${r.first} ${r.last.charAt(0)}.</text>`;
-
-      h += `<rect x="${sec.x}" y="${hy}" width="${hw}" height="${hh}" fill="transparent" stroke="transparent" stroke-width="4" style="cursor:pointer" onclick="tableClick('${sec.id}')"/>`;
+      h += `<rect x="${cx}" y="${cy}" width="${CW}" height="${CH}" rx="5"
+        fill="${s.fill}" stroke="${s.stroke}" stroke-width="2"/>`;
+      h += `<text x="${cx_mid}" y="${cy_mid-14}" font-family="Inter,sans-serif" font-size="13" font-weight="500"
+        fill="${s.text}" text-anchor="middle">${cell.id}</text>`;
+      h += `<text x="${cx_mid}" y="${cy_mid+4}" font-family="Inter,sans-serif" font-size="10"
+        fill="${s.text}" text-anchor="middle" opacity=".85">${s.label}</text>`;
+      if(r) h += `<text x="${cx_mid}" y="${cy_mid+20}" font-family="Inter,sans-serif" font-size="9"
+        fill="${s.text}" text-anchor="middle" opacity=".8">${r.first} ${r.last.charAt(0)}.</text>`;
+      h += `<rect x="${cx}" y="${cy}" width="${CW}" height="${CH}" fill="transparent" stroke="transparent" style="cursor:pointer" onclick="tableClick('${cell.id}')"/>`;
     });
 
-    // Seat marks top
+    // Seat marks — top row
     for(let i=0;i<8;i++){
-      const sx = BX+24+i*48;
-      h += `<rect x="${sx-16}" y="${BY-18}" width="32" height="14" rx="3"
+      const sx = BX + 22 + i*48;
+      h += `<rect x="${sx-14}" y="${BY-20}" width="28" height="13" rx="3"
         fill="${seatColor}" stroke="${boothWall}" stroke-width=".7"/>`;
     }
-    // Seat marks bottom
+    // Seat marks — bottom row
     for(let i=0;i<8;i++){
-      const sx = BX+24+i*48;
-      h += `<rect x="${sx-16}" y="${BY+BH+4}" width="32" height="14" rx="3"
+      const sx = BX + 22 + i*48;
+      h += `<rect x="${sx-14}" y="${BY+TOTAL_H+8}" width="28" height="13" rx="3"
         fill="${seatColor}" stroke="${boothWall}" stroke-width=".7"/>`;
     }
   }
@@ -616,7 +593,7 @@ function renderFloor() {
   {
     const {state, r} = getTableState('T17');
     const s = stateStyle(state);
-    const bx=380, by=570, bw=220, bh=80;
+    const bx=380, by=620, bw=220, bh=80;
     zone('T17', bx, by, bw, bh);
     // Booth backing (bottom)
     h += `<rect x="${bx+6}" y="${by+bh-4}" width="${bw-12}" height="10" rx="3"
@@ -636,8 +613,8 @@ function renderFloor() {
   // ── Section labels ──
   h += `
   <text x="127"  y="660" font-family="Inter,sans-serif" font-size="9" fill="${labelCol}" text-anchor="middle" opacity=".6" letter-spacing="1">LEFT SECTION</text>
-  <text x="855"  y="590" font-family="Inter,sans-serif" font-size="9" fill="${labelCol}" text-anchor="middle" opacity=".6" letter-spacing="1">RIGHT SECTION</text>
-  <text x="480"  y="226" font-family="Inter,sans-serif" font-size="9" fill="${labelCol}" text-anchor="middle" opacity=".6" letter-spacing="1">CENTER DINING</text>
+  <text x="855"  y="640" font-family="Inter,sans-serif" font-size="9" fill="${labelCol}" text-anchor="middle" opacity=".6" letter-spacing="1">RIGHT SECTION</text>
+  <text x="480"  y="215" font-family="Inter,sans-serif" font-size="9" fill="${labelCol}" text-anchor="middle" opacity=".6" letter-spacing="1">CENTER DINING</text>
   `;
 
   svg.innerHTML = h;
