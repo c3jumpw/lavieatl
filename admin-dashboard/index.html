@@ -258,6 +258,7 @@ h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:var
   <div class="card"><div class="card-title">Center Tables</div><div id="tc-center_tables"></div></div>
   <div class="card"><div class="card-title">Bottom Booth</div><div id="tc-bottom_booth"></div></div>
   <div class="card"><div class="card-title">Bar</div><div id="tc-bar"></div></div>
+  <div class="card"><div class="card-title">🌿 Patio</div><div id="tc-patio"></div></div>
 </div>
 
 <!-- TEMPLATES -->
@@ -344,12 +345,17 @@ const TABLES_DEF=[
   {id:"T3",num:"Table 3",cap:4,section:"booth_right"},{id:"T4",num:"Table 4",cap:4,section:"booth_right"},
   {id:"T5",num:"Table 5",cap:6,section:"booth_left"},{id:"T7",num:"Table 7",cap:6,section:"booth_left"},
   {id:"T8",num:"Table 8",cap:4,section:"booth_left"},
-  {id:"T9",num:"T9",cap:4,section:"center_tables"},{id:"T10",num:"T10",cap:4,section:"center_tables"},
-  {id:"T11",num:"T11",cap:4,section:"center_tables"},{id:"T12",num:"T12",cap:4,section:"center_tables"},
-  {id:"T13",num:"T13",cap:4,section:"center_tables"},{id:"T14",num:"T14",cap:4,section:"center_tables"},
-  {id:"T15",num:"T15",cap:4,section:"center_tables"},{id:"T16",num:"T16",cap:4,section:"center_tables"},
+  {id:"T9",num:"Table 9",cap:4,section:"center_banq"},{id:"T10",num:"Table 10",cap:4,section:"center_banq"},
+  {id:"T11",num:"Table 11",cap:4,section:"center_banq"},{id:"T12",num:"Table 12",cap:4,section:"center_banq"},
+  {id:"T13",num:"Table 13",cap:4,section:"center_banq"},{id:"T14",num:"Table 14",cap:4,section:"center_banq"},
+  {id:"T15",num:"Table 15",cap:4,section:"center_banq"},{id:"T16",num:"Table 16",cap:4,section:"center_banq"},
   {id:"T17",num:"Table 17",cap:6,section:"bottom_booth"},
-  {id:"BAR",num:"Bar",cap:8,section:"bar"},
+  {id:"BAR",num:"Bar",cap:10,section:"bar"},
+  {id:"P1",num:"Patio 1",cap:4,section:"patio"},
+  {id:"P2",num:"Patio 2",cap:4,section:"patio"},
+  {id:"P3",num:"Patio 3",cap:4,section:"patio"},
+  {id:"P4",num:"Patio 4",cap:4,section:"patio"},
+  {id:"P5",num:"Patio 5",cap:4,section:"patio"},
 ];
 const SERVERS_DEF=[
   {id:"s1",name:"Amara Johnson",role:"Lead Server",color:"#C8956C",initials:"AJ"},
@@ -374,6 +380,7 @@ if(!_store){_store={reservations:JSON.parse(JSON.stringify(SAMPLE_RSV)),tableSta
 if(!_store.tables)_store.tables=TABLES_DEF;
 if(!_store.servers)_store.servers=SERVERS_DEF;
 if(!_store.reservations)_store.reservations=JSON.parse(JSON.stringify(SAMPLE_RSV));
+TABLES_DEF.forEach(td=>{if(!_store.tables.find(t=>t.id===td.id))_store.tables.push(td);});
 
 function persistStore(){saveStore(_store);}
 
@@ -539,8 +546,8 @@ function removeServer(id){if(!_store.servers)return;_store.servers=_store.server
 
 function renderTableConfig(){
   const tables=_store.tables||TABLES_DEF;
-  const secIds={booth_left:'tc-booth_left',booth_right:'tc-booth_right',center_tables:'tc-center_tables',bottom_booth:'tc-bottom_booth',bar:'tc-bar'};
-  const secLabels={booth_left:'Left Booths',booth_right:'Right Booth Strip',center_tables:'Center Tables',bottom_booth:'Bottom Booth',bar:'Bar'};
+  const secIds={booth_left:'tc-booth_left',booth_right:'tc-booth_right',center_banq:'tc-center_tables',bottom_booth:'tc-bottom_booth',bar:'tc-bar',patio:'tc-patio'};
+  const secLabels={booth_left:'Left Booths',booth_right:'Right Booth Strip',center_banq:'Center Banquette',bottom_booth:'Bottom Booth',bar:'Bar',patio:'Patio'};
   const rendered={};
   tables.forEach(t=>{
     const elId=secIds[t.section];if(!elId)return;
